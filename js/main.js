@@ -277,7 +277,7 @@ const PRODUCTS = [
     image: 'images/products/p19_optima.jpg',
     name: 'Сборка «Оптима»', nameEn: '"Optima" PC Build',
     price: 229990, oldPrice: 319990, badge: 'discount',
-    specs: { 'Процессор': 'Ryzen 7 9800X3D', 'Видеокарта': 'RTX 5070 12 ГБ', 'Память': '32 ГБ DDR5-6000', 'Накопитель': 'Samsung 9100 Pro 1 ТБ' },
+    specs: { 'Процессор': 'Ryzen 7 9800X3D', 'Видеокарта': 'RTX 5070', 'Память': '32 ГБ DDR5-6000', 'Накопитель': 'Samsung 9100 Pro 1 ТБ' },
     short: 'Игровой оптимум: 9800X3D плюс RTX 5070 — максимум FPS в QHD и запас на несколько лет.',
     shortEn: 'The gaming sweet spot: 9800X3D plus RTX 5070 — maximum QHD FPS with years of headroom.'
   },
@@ -286,7 +286,7 @@ const PRODUCTS = [
     image: 'images/products/p20_extreme.jpg',
     name: 'Сборка «Экстрим»', nameEn: '"Extreme" PC Build',
     price: 389990, oldPrice: 409990, badge: 'discount',
-    specs: { 'Процессор': 'Ryzen 7 9800X3D', 'Видеокарта': 'RTX 5080 16 ГБ', 'Память': '64 ГБ DDR5-6000', 'Накопитель': 'SSD 2 ТБ PCIe 5.0' },
+    specs: { 'Процессор': 'Ryzen 7 9800X3D', 'Видеокарта': 'RTX 5080', 'Память': '64 ГБ DDR5-6000', 'Накопитель': 'SSD 2 ТБ PCIe 5.0' },
     short: 'Флагманская сборка для 4K-гейминга, стримов и монтажа без компромиссов.',
     shortEn: 'A flagship build for 4K gaming, streaming and editing without compromises.'
   }
@@ -807,8 +807,11 @@ function renderBadge(product) {
 function renderCard(product) {
   const specs = Object.values(product.specs).slice(0, 2)
     .map((value) => '<span class="product-card__spec">' + translateValue(value) + '</span>').join('');
-  const oldPrice = product.oldPrice
-    ? '<s class="product-card__old-price">' + formatPrice(product.oldPrice) + '</s>'
+  const discount = product.oldPrice
+    ? Math.round((product.oldPrice - product.price) / product.oldPrice * 100)
+    : 0;
+  const discountTag = discount >= 1
+    ? '<span class="product-card__discount">-' + discount + '%</span>'
     : '';
   return (
     '<article class="product-card" data-category="' + product.category + '" data-price="' + product.price + '" data-rating="' + product.rating + '" data-votes="' + product.votes + '">' +
@@ -826,7 +829,7 @@ function renderCard(product) {
     '<h3 class="product-card__title"><a class="product-card__link" href="product.html?id=' + product.id + '">' + productName(product) + '</a></h3>' +
     '<div class="product-card__specs">' + specs + '</div>' +
     '<div class="product-card__meta">' +
-    '<span class="product-card__price">' + formatPrice(product.price) + '</span>' + oldPrice +
+    '<span class="product-card__price">' + formatPrice(product.price) + '</span>' + discountTag +
     '</div>' +
     '<div class="product-card__actions">' +
     '<a class="button button--sm" href="product.html?id=' + product.id + '">' + t('product.more') + '</a>' +
