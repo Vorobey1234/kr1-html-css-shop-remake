@@ -2028,17 +2028,30 @@ button {
   z-index: 40;
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   background: var(--accent);
   color: var(--accent-ink);
-  border: var(--border);
-  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
   box-shadow: 4px 4px 0 var(--shadow);
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
-  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease,
+    box-shadow 0.15s ease, background-color 0.2s ease;
+}
+
+.scroll-top:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.scroll-top:active {
+  transform: translateY(0);
+  box-shadow: 2px 2px 0 var(--shadow);
 }
 
 .scroll-top--visible {
@@ -2227,6 +2240,55 @@ button {
 
   .hero__float--1 {
     display: none;
+  }
+
+  /* --- Мобильная доводка --- */
+
+  /* iOS не зумит поле при фокусе, только если шрифт >= 16px */
+  .form-field__input,
+  .form-field__select,
+  .form-field__textarea {
+    font-size: 16px;
+  }
+
+  .scroll-top {
+    width: 46px;
+    height: 46px;
+    right: 14px;
+    bottom: 14px;
+    border-radius: 12px;
+  }
+
+  .cat-tile {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .cat-tile__mark {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cat-tile__mark svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .order-dialog__wrapper {
+    padding: 20px 20px 24px;
+  }
+
+  .product-card__actions .button {
+    padding: 9px 12px;
+    font-size: 11.5px;
+  }
+
+  .filter-option {
+    font-size: 16px;
+  }
+
+  .topbar__inner {
+    justify-content: center;
   }
 }
 
