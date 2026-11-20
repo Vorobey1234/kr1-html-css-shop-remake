@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=remake-1">
-<script src="js/main.js?v=remake-1" defer></script>
+<link rel="stylesheet" href="css/style.css?v=remake-2">
+<script src="js/main.js?v=remake-2" defer></script>
 </head>
 <body>
 
@@ -38,6 +38,7 @@
         <li><a class="site-nav__link" href="reviews.html">Отзывы</a></li>
         <li><a class="site-nav__link" href="about.html">О нас</a></li>
         <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        <li><a class="site-nav__link" href="account.html">Кабинет</a></li>
       </ul>
     </nav>
     <div class="site-header__actions">
@@ -45,6 +46,7 @@
         <svg class="icon-button__icon icon-button__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg class="icon-button__icon icon-button__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
+      <button class="icon-button icon-button--lang" id="lang-toggle" type="button" aria-label="Language / Язык">EN</button>
       <button class="button button--sm button--primary site-header__cta" type="button" data-product="18">Собрать ПК</button>    </div>
   </div>
 </div>
@@ -53,37 +55,37 @@
 <main class="main">
 
 <section class="hero" id="hero">
-  <span class="hero__float hero__float--1" aria-hidden="true">RTX 50 СЕРИИ В НАЛИЧИИ</span>
-  <span class="hero__float hero__float--2" aria-hidden="true">СБОРКА БЕСПЛАТНО</span>
-  <span class="hero__float hero__float--3" aria-hidden="true">ГАРАНТИЯ ДО 3 ЛЕТ</span>
+  <span class="hero__float hero__float--1" aria-hidden="true" data-i18n="hero.float1">RTX 50 СЕРИИ В НАЛИЧИИ</span>
+  <span class="hero__float hero__float--2" aria-hidden="true" data-i18n="hero.float2">СБОРКА БЕСПЛАТНО</span>
+  <span class="hero__float hero__float--3" aria-hidden="true" data-i18n="hero.float3">ГАРАНТИЯ ДО 3 ЛЕТ</span>
   <div class="container hero__inner">
     <div class="hero__content">
-      <p class="hero__eyebrow">Магазин комплектующих и сборок ПК</p>
-      <h1 class="hero__title">Мощное железо.<br>Честные <span class="hero__title-accent">цены.</span></h1>
-      <p class="hero__text">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">Магазин комплектующих и сборок ПК</p>
+      <h1 class="hero__title"><span data-i18n="hero.title1">Мощное железо.</span><br><span data-i18n="hero.title2">Честные </span><span class="hero__title-accent" data-i18n="hero.titleAccent">цены.</span></h1>
+      <p class="hero__text" data-i18n="hero.text">
         Процессоры, видеокарты, память и готовые сборки с тестированием перед выдачей.
         Подберём конфигурацию под ваш бюджет и задачи — от рабочих станций до 4K-гейминга.
       </p>
       <div class="hero__actions">
-        <a class="button button--primary button--lg" href="catalog.html">Каталог комплектующих</a>
-        <a class="button button--lg" href="#builds">Готовые сборки</a>
+        <a class="button button--primary button--lg" href="catalog.html" data-i18n="hero.buttonCatalog">Каталог комплектующих</a>
+        <a class="button button--lg" href="#builds" data-i18n="hero.buttonBuilds">Готовые сборки</a>
       </div>
-      <p class="hero__note">Доставка по Москве — завтра. Самовывоз — через 2 часа после заказа.</p>
+      <p class="hero__note" data-i18n="hero.note">Доставка по Москве — завтра. Самовывоз — через 2 часа после заказа.</p>
     </div>
     <div class="hero__panel" data-product="19" style="cursor: pointer">
-      <span class="hero__panel-tag">// Товар недели</span>
+      <span class="hero__panel-tag" data-i18n="panel.tag">// Товар недели</span>
       <div class="hero__panel-body">
-        <h2 class="hero__panel-title"><a href="product.html?id=19">Сборка «Оптима»</a></h2>
+        <h2 class="hero__panel-title"><a href="product.html?id=19" data-i18n="panel.title">Сборка «Оптима»</a></h2>
         <ul class="hero__panel-list">
-          <li class="hero__panel-item"><span>Процессор</span><span>Ryzen 7 9800X3D</span></li>
-          <li class="hero__panel-item"><span>Видеокарта</span><span>RTX 5070 12 ГБ GDDR7</span></li>
-          <li class="hero__panel-item"><span>Память</span><span>32 ГБ DDR5-6000</span></li>
-          <li class="hero__panel-item"><span>Накопитель</span><span>Samsung 9100 PRO 1 ТБ</span></li>
-          <li class="hero__panel-item"><span>Тесты</span><span>стресс-тест 2 часа</span></li>
+          <li class="hero__panel-item"><span data-i18n="panel.cpu">Процессор</span><span>Ryzen 7 9800X3D</span></li>
+          <li class="hero__panel-item"><span data-i18n="panel.gpu">Видеокарта</span><span>RTX 5070 12 ГБ GDDR7</span></li>
+          <li class="hero__panel-item"><span data-i18n="panel.ram">Память</span><span>32 ГБ DDR5-6000</span></li>
+          <li class="hero__panel-item"><span data-i18n="panel.storage">Накопитель</span><span>Samsung 9100 PRO 1 ТБ</span></li>
+          <li class="hero__panel-item"><span data-i18n="panel.tests">Тесты</span><span data-i18n="panel.testsValue">стресс-тест 2 часа</span></li>
         </ul>
         <div class="hero__panel-footer">
-          <p class="hero__panel-price">319 990 ₽<small>сборка и тесты включены</small></p>
-          <button class="button button--sm" type="button" data-product="19">Заказать</button>
+          <p class="hero__panel-price">319 990 ₽<small data-i18n="panel.priceNote">сборка и тесты включены</small></p>
+          <button class="button button--sm" type="button" data-product="19" data-i18n="panel.order">Заказать</button>
         </div>
       </div>
     </div>
@@ -94,43 +96,43 @@
   <div class="container">
     <div class="section__head">
       <div>
-        <p class="section__eyebrow">Каталог</p>
-        <h2 class="section__title">Категории товаров</h2>
+        <p class="section__eyebrow" data-i18n="cats.eyebrow">Каталог</p>
+        <h2 class="section__title" data-i18n="cats.title">Категории товаров</h2>
       </div>
-      <p class="section__note">Весь товар в наличии на складе в Москве. Отгрузка в день заказа.</p>
+      <p class="section__note" data-i18n="cats.note">Весь товар в наличии на складе в Москве. Отгрузка в день заказа.</p>
     </div>
     <div class="cat-grid">
       <a class="cat-tile" data-category="cpu" href="catalog.html?category=cpu">
         <span class="cat-tile__mark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 20v2" /> <path d="M12 2v2" /> <path d="M17 20v2" /> <path d="M17 2v2" /> <path d="M2 12h2" /> <path d="M2 17h2" /> <path d="M2 7h2" /> <path d="M20 12h2" /> <path d="M20 17h2" /> <path d="M20 7h2" /> <path d="M7 20v2" /> <path d="M7 2v2" /> <rect x="4" y="4" width="16" height="16" rx="2" /> <rect x="8" y="8" width="8" height="8" rx="1" /> </svg></span>
-        <span><span class="cat-tile__title">Процессоры</span><br><span class="cat-tile__count">3 товара</span></span>
+        <span><span class="cat-tile__title" data-i18n-cat="cpu">Процессоры</span><br><span class="cat-tile__count" data-i18n="count.cpu">3 товара</span></span>
       </a>
       <a class="cat-tile" data-category="gpu" href="catalog.html?category=gpu">
         <span class="cat-tile__mark"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="2" y="7" width="19" height="10" rx="2"/> <circle cx="8.2" cy="12" r="2.5"/> <path d="M8.2 10.2v3.6M6.4 12h3.6"/> <circle cx="15" cy="12" r="2.5"/> <path d="M15 10.2v3.6M13.2 12h3.6"/> <path d="M5 17v2M8.5 17v2M12 17v2M15.5 17v2M19 17v2"/></svg></span>
-        <span><span class="cat-tile__title">Видеокарты</span><br><span class="cat-tile__count">4 товара</span></span>
+        <span><span class="cat-tile__title" data-i18n-cat="gpu">Видеокарты</span><br><span class="cat-tile__count" data-i18n="count.gpu">4 товара</span></span>
       </a>
       <a class="cat-tile" data-category="ram" href="catalog.html?category=ram">
         <span class="cat-tile__mark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 12v-2" /> <path d="M12 18v-2" /> <path d="M16 12v-2" /> <path d="M16 18v-2" /> <path d="M2 11h1.5" /> <path d="M20 18v-2" /> <path d="M20.5 11H22" /> <path d="M4 18v-2" /> <path d="M8 12v-2" /> <path d="M8 18v-2" /> <rect x="2" y="6" width="20" height="10" rx="2" /> </svg></span>
-        <span><span class="cat-tile__title">Оперативная память</span><br><span class="cat-tile__count">2 товара</span></span>
+        <span><span class="cat-tile__title" data-i18n-cat="ram">Оперативная память</span><br><span class="cat-tile__count" data-i18n="count.ram">2 товара</span></span>
       </a>
       <a class="cat-tile" data-category="storage" href="catalog.html?category=storage">
         <span class="cat-tile__mark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 16h.01" /> <path d="M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" /> <path d="M21.946 12.013H2.054" /> <path d="M6 16h.01" /> </svg></span>
-        <span><span class="cat-tile__title">Накопители</span><br><span class="cat-tile__count">2 товара</span></span>
+        <span><span class="cat-tile__title" data-i18n-cat="storage">Накопители</span><br><span class="cat-tile__count" data-i18n="count.storage">2 товара</span></span>
       </a>
       <a class="cat-tile" data-category="motherboard" href="catalog.html?category=motherboard">
         <span class="cat-tile__mark"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="3" y="3" width="18" height="18" rx="1.5"/> <rect x="6" y="6" width="5" height="5" rx="0.6"/> <rect x="7.3" y="7.3" width="2.4" height="2.4" rx="0.4"/> <path d="M14.6 6v5M16.8 6v5M19 6v5"/> <path d="M6 15.5h5M6 18.2h3.2"/> <circle cx="17.5" cy="16.8" r="1.5"/> </svg></span>
-        <span><span class="cat-tile__title">Материнские платы</span><br><span class="cat-tile__count">2 товара</span></span>
+        <span><span class="cat-tile__title" data-i18n-cat="motherboard">Материнские платы</span><br><span class="cat-tile__count" data-i18n="count.motherboard">2 товара</span></span>
       </a>
       <a class="cat-tile" data-category="psu" href="catalog.html?category=psu">
         <span class="cat-tile__mark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z" /> <path d="m2 22 3-3" /> <path d="M7.5 13.5 10 11" /> <path d="M10.5 16.5 13 14" /> <path d="m18 3-4 4h6l-4 4" /> </svg></span>
-        <span><span class="cat-tile__title">Блоки питания</span><br><span class="cat-tile__count">2 товара</span></span>
+        <span><span class="cat-tile__title" data-i18n-cat="psu">Блоки питания</span><br><span class="cat-tile__count" data-i18n="count.psu">2 товара</span></span>
       </a>
       <a class="cat-tile" data-category="case" href="catalog.html?category=case">
         <span class="cat-tile__mark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="14" height="20" x="5" y="2" rx="2" /> <path d="M15 14h.01" /> <path d="M9 6h6" /> <path d="M9 10h6" /> </svg></span>
-        <span><span class="cat-tile__title">Корпуса</span><br><span class="cat-tile__count">2 товара</span></span>
+        <span><span class="cat-tile__title" data-i18n-cat="case">Корпуса</span><br><span class="cat-tile__count" data-i18n="count.case">2 товара</span></span>
       </a>
       <a class="cat-tile" data-category="build" href="catalog.html?category=build">
         <span class="cat-tile__mark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 18h6" /> <path d="M6 18h.01" /> <path d="M8 6h1" /> <rect x="2" y="14" width="20" height="8" rx="2" /> <rect x="4" y="2" width="16" height="12" rx="2" /> </svg></span>
-        <span><span class="cat-tile__title">Готовые сборки</span><br><span class="cat-tile__count">3 конфигурации</span></span>
+        <span><span class="cat-tile__title" data-i18n-cat="build">Готовые сборки</span><br><span class="cat-tile__count" data-i18n="count.build">3 конфигурации</span></span>
       </a>
     </div>
   </div>
@@ -145,10 +147,10 @@
   <div class="container">
     <div class="cta-band__inner">
       <div>
-        <h2 class="cta-band__title">Не нашли нужную деталь?</h2>
-        <p class="cta-band__text">Оставьте заявку — подберём комплектующие под ваш бюджет, проверим совместимость и соберём конфигурацию мечты.</p>
+        <h2 class="cta-band__title" data-i18n="cta.title">Не нашли нужную деталь?</h2>
+        <p class="cta-band__text" data-i18n="cta.text">Оставьте заявку — подберём комплектующие под ваш бюджет, проверим совместимость и соберём конфигурацию мечты.</p>
       </div>
-      <button class="button button--lg" type="button" data-product>Оставить заявку</button>
+      <button class="button button--lg" type="button" data-product data-i18n="cta.button">Оставить заявку</button>
     </div>
   </div>
 </section>
@@ -176,13 +178,14 @@
           <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
           <li><a class="site-footer__link" href="reviews.html">Отзывы</a></li>
           <li><a class="site-footer__link" href="about.html">О нас</a></li>
+          <li><a class="site-footer__link" href="account.html">Кабинет</a></li>
         </ul>
       </nav>
       <div class="site-footer__contacts">
         <h2 class="site-footer__title">Контакты</h2>
         <p class="site-footer__contact">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          Россия, г. Москва, проспект Вернадского, д. 78
+          <span data-i18n="contacts.addressValue">Россия, г. Москва, проспект Вернадского, д. 78</span>
         </p>
         <p class="site-footer__contact">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg>
@@ -190,7 +193,7 @@
         </p>
         <p class="site-footer__contact">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          Пн-Сб: 10:00-20:00 · Вс: 11:00-17:00
+          <span data-i18n="topbar.hours">Пн-Сб: 10:00-20:00 · Вс: 11:00-17:00</span>
         </p>
         <p class="site-footer__contact">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
@@ -215,52 +218,52 @@
 <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
   <div class="order-dialog__wrapper">
     <div class="order-dialog__head">
-      <h2 class="order-dialog__title" id="order-dialog-title">Оформление заказа</h2>
+      <h2 class="order-dialog__title" id="order-dialog-title" data-i18n="dialog.title">Оформление заказа</h2>
       <button class="icon-button order-dialog__close" id="order-close" type="button" aria-label="Закрыть">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
-    <p class="order-dialog__note">Оставьте контакты — перезвоним в течение 15 минут в рабочее время и подтвердим заказ.</p>
+    <p class="order-dialog__note" data-i18n="dialog.note">Оставьте контакты — перезвоним в течение 15 минут в рабочее время и подтвердим заказ.</p>
     <form class="form-grid" id="order-form" action="#" method="post" data-validate novalidate>
       <div class="form-field form-field--full">
-        <label class="form-field__label form-field__label--required" for="order-product">Товар</label>
+        <label class="form-field__label form-field__label--required" for="order-product" data-i18n="dialog.product">Товар</label>
         <select class="form-field__select" id="order-product" name="product" required></select>
       </div>
       <div class="form-field">
-        <label class="form-field__label form-field__label--required" for="order-name">Имя</label>
-        <input class="form-field__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+        <label class="form-field__label form-field__label--required" for="order-name" data-i18n="dialog.name">Имя</label>
+        <input class="form-field__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" data-i18n-placeholder="dialog.namePlaceholder" minlength="2" autocomplete="given-name" required>
       </div>
       <div class="form-field">
-        <label class="form-field__label form-field__label--required" for="order-phone">Телефон</label>
+        <label class="form-field__label form-field__label--required" for="order-phone" data-i18n="dialog.phone">Телефон</label>
         <input class="form-field__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
-        <small class="form-field__hint">Формат: +7 (900) 000-00-00</small>
+        <small class="form-field__hint" data-i18n="dialog.phoneHint">Формат: +7 (900) 000-00-00</small>
       </div>
       <div class="form-field">
-        <label class="form-field__label form-field__label--required" for="order-email">E-mail</label>
+        <label class="form-field__label form-field__label--required" for="order-email" data-i18n="dialog.email">E-mail</label>
         <input class="form-field__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
       </div>
       <div class="form-field">
-        <label class="form-field__label" for="order-delivery">Доставка</label>
+        <label class="form-field__label" for="order-delivery" data-i18n="dialog.delivery">Доставка</label>
         <select class="form-field__select" id="order-delivery" name="delivery">
-          <option value="courier">Курьером по Москве</option>
-          <option value="pickup">Самовывоз</option>
-          <option value="cdek">СДЭК по России</option>
+          <option value="courier" data-i18n="dialog.deliveryCourier">Курьером по Москве</option>
+          <option value="pickup" data-i18n="dialog.deliveryPickup">Самовывоз</option>
+          <option value="cdek" data-i18n="dialog.deliveryCdek">СДЭК по России</option>
         </select>
       </div>
       <div class="form-field form-field--full">
-        <label class="form-field__label" for="order-comment">Комментарий</label>
-        <textarea class="form-field__textarea" id="order-comment" name="comment" rows="3" placeholder="Укажите дополнительную информацию"></textarea>
+        <label class="form-field__label" for="order-comment" data-i18n="dialog.comment">Комментарий</label>
+        <textarea class="form-field__textarea" id="order-comment" name="comment" rows="3" placeholder="Укажите дополнительную информацию" data-i18n-placeholder="dialog.commentPlaceholder"></textarea>
       </div>
       <label class="checkbox-line">
         <input type="checkbox" name="agreement" required>
-        Я согласен на обработку персональных данных
+        <span data-i18n="dialog.agreement">Я согласен на обработку персональных данных</span>
       </label>
       <div class="form-actions">
-        <button class="button" type="button" id="order-cancel">Закрыть</button>
-        <button class="button button--primary" type="submit">Отправить заказ</button>
+        <button class="button" type="button" id="order-cancel" data-i18n="dialog.cancel">Закрыть</button>
+        <button class="button button--primary" type="submit" data-i18n="dialog.submit">Отправить заказ</button>
       </div>
-      <p class="form-message form-message--success" hidden>Заказ принят! Перезвоним в течение 15 минут в рабочее время.</p>
-      <p class="form-message form-message--error" hidden>Проверьте правильность заполнения полей формы.</p>
+      <p class="form-message form-message--success" hidden data-i18n="dialog.success">Заказ принят! Перезвоним в течение 15 минут в рабочее время.</p>
+      <p class="form-message form-message--error" hidden data-i18n="dialog.error">Проверьте правильность заполнения полей формы.</p>
     </form>
   </div>
 </dialog>

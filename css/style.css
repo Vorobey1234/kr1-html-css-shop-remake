@@ -2332,3 +2332,364 @@ button {
   white-space: nowrap;
   border: 0;
 }
+
+/* ===================== Переключатель языка ===================== */
+
+.icon-button--lang {
+  width: auto;
+  min-width: 34px;
+  padding: 0 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ===================== Каталог: поиск и сортировка ===================== */
+
+.catalog-toolbar__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.catalog-toolbar__controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.catalog-search {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.catalog-search__icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.catalog-search__input {
+  width: 220px;
+  height: 42px;
+  padding: 0 12px 0 36px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+.catalog-search__input:focus {
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.catalog-search__input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.catalog-sort {
+  height: 42px;
+  padding: 0 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  cursor: pointer;
+}
+
+/* ===================== Карточка товара: бренд и рейтинг ===================== */
+
+.product-card__topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  min-height: 20px;
+  margin-bottom: 8px;
+}
+
+.product-card__brand {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.product-card__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.product-card__stars {
+  color: var(--cat-psu);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.product-card__votes {
+  display: none;
+}
+
+/* ===================== Страница товара: рейтинг ===================== */
+
+.product-page__rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 4px;
+}
+
+.product-page__brand {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.product-page__stars {
+  color: var(--cat-psu);
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.product-page__rating-value {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+/* ===================== Личный кабинет ===================== */
+
+.account-guest {
+  max-width: 560px;
+}
+
+.account-user {
+  margin-top: 6px;
+}
+
+.account-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+.account-head__label {
+  margin: 0 0 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.account-head__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.account-head__phone {
+  margin: 4px 0 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.account-orders-title {
+  margin: 28px 0 14px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.orders-list {
+  display: grid;
+  gap: 14px;
+}
+
+.order-card {
+  padding: 18px 20px;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+.order-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.order-card__num {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.order-card__date {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.order-card__title {
+  margin: 10px 0 14px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.order-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding-top: 12px;
+  border-top: 1.5px solid var(--line-soft);
+}
+
+.order-step--done {
+  border-top-color: var(--accent);
+}
+
+.order-step__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid var(--muted);
+  box-sizing: border-box;
+}
+
+.order-step--done .order-step__dot {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.order-step__check {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.order-step__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.order-step--done .order-step__label {
+  color: var(--ink-soft);
+}
+
+.order-card__status {
+  margin: 14px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.order-card__demo {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.orders-empty {
+  display: none;
+  padding: 28px 20px;
+  text-align: center;
+  border: 1.5px dashed var(--line-soft);
+  border-radius: var(--radius);
+}
+
+.orders-empty--visible {
+  display: block;
+}
+
+.orders-empty__title {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.orders-empty__text {
+  max-width: 46ch;
+  margin: 0 auto 16px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .order-steps {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+  }
+}
+
+@media (max-width: 720px) {
+  .catalog-toolbar__side {
+    align-items: stretch;
+  }
+
+  .catalog-toolbar__controls {
+    flex-direction: column;
+  }
+
+  .catalog-search,
+  .catalog-search__input,
+  .catalog-sort {
+    width: 100%;
+  }
+
+  .account-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
