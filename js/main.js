@@ -21,15 +21,93 @@ const BADGES = {
 
 // Инлайн-SVG: цвет штрихов наследует color карточки
 const IMAGES = {
-  cpu: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 20v2" /> <path d="M12 2v2" /> <path d="M17 20v2" /> <path d="M17 2v2" /> <path d="M2 12h2" /> <path d="M2 17h2" /> <path d="M2 7h2" /> <path d="M20 12h2" /> <path d="M20 17h2" /> <path d="M20 7h2" /> <path d="M7 20v2" /> <path d="M7 2v2" /> <rect x="4" y="4" width="16" height="16" rx="2" /> <rect x="8" y="8" width="8" height="8" rx="1" /> </svg>',
-  gpu: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="2" y="7" width="19" height="10" rx="2"/> <circle cx="8.2" cy="12" r="2.5"/> <path d="M8.2 10.2v3.6M6.4 12h3.6"/> <circle cx="15" cy="12" r="2.5"/> <path d="M15 10.2v3.6M13.2 12h3.6"/> <path d="M5 17v2M8.5 17v2M12 17v2M15.5 17v2M19 17v2"/></svg>',
-  ram: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 12v-2" /> <path d="M12 18v-2" /> <path d="M16 12v-2" /> <path d="M16 18v-2" /> <path d="M2 11h1.5" /> <path d="M20 18v-2" /> <path d="M20.5 11H22" /> <path d="M4 18v-2" /> <path d="M8 12v-2" /> <path d="M8 18v-2" /> <rect x="2" y="6" width="20" height="10" rx="2" /> </svg>',
-  storage: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 16h.01" /> <path d="M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" /> <path d="M21.946 12.013H2.054" /> <path d="M6 16h.01" /> </svg>',
-  motherboard: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="3" y="3" width="18" height="18" rx="1.5"/> <rect x="6" y="6" width="5" height="5" rx="0.6"/> <rect x="7.3" y="7.3" width="2.4" height="2.4" rx="0.4"/> <path d="M14.6 6v5M16.8 6v5M19 6v5"/> <path d="M6 15.5h5M6 18.2h3.2"/> <circle cx="17.5" cy="16.8" r="1.5"/> </svg>',
-  psu: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z" /> <path d="m2 22 3-3" /> <path d="M7.5 13.5 10 11" /> <path d="M10.5 16.5 13 14" /> <path d="m18 3-4 4h6l-4 4" /> </svg>',
-  case: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="14" height="20" x="5" y="2" rx="2" /> <path d="M15 14h.01" /> <path d="M9 6h6" /> <path d="M9 10h6" /> </svg>',
-  build: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 18h6" /> <path d="M6 18h.01" /> <path d="M8 6h1" /> <rect x="2" y="14" width="20" height="8" rx="2" /> <rect x="4" y="2" width="16" height="12" rx="2" /> </svg>'
+  cpu: '<svg class="product-illustration" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="30" y="10" width="60" height="66" rx="7" stroke-width="2.6"/>' +
+    '<rect x="38" y="18" width="44" height="50" rx="5" stroke-width="2.6" fill="currentColor" fill-opacity="0.13"/>' +
+    '<path d="M46 28h20M46 36h13M46 44h16" stroke-width="2" stroke="var(--ink-soft)"/>' +
+    '<path d="M72 24l7 7v-7z" fill="currentColor" stroke="none"/>' +
+    '<path d="M30 24v40M90 24v40" stroke-width="2.2" stroke-dasharray="1.5 4.5" stroke="var(--ink-soft)"/>' +
+    '<path d="M38 76h44" stroke-width="4.4" stroke-dasharray="0.5 5.2" stroke="var(--ink-soft)"/>' +
+    '</svg>',
+  gpu: '<svg class="product-illustration" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="8" y="30" width="102" height="32" rx="6" stroke-width="2.6"/>' +
+    '<rect x="8" y="30" width="102" height="9" rx="4" stroke="none" fill="currentColor" fill-opacity="0.14"/>' +
+    '<rect x="50" y="20" width="20" height="10" rx="2" stroke-width="2.2"/>' +
+    '<circle cx="32" cy="50" r="10.5" stroke-width="2.2"/>' +
+    '<circle cx="32" cy="50" r="3.4" fill="currentColor" stroke="none"/>' +
+    '<path d="M32 50V41M37 47l8 4.5M36.5 55l-8 4.5" stroke-width="2"/>' +
+    '<circle cx="86" cy="50" r="10.5" stroke-width="2.2"/>' +
+    '<circle cx="86" cy="50" r="3.4" fill="currentColor" stroke="none"/>' +
+    '<path d="M86 50V41M91 47l8 4.5M90.5 55l-8 4.5" stroke-width="2"/>' +
+    '<path d="M20 62h78" stroke-width="4.6" stroke-dasharray="3 4" stroke="var(--ink-soft)"/>' +
+    '<path d="M113 32v26" stroke-width="2.6"/><circle cx="113" cy="60" r="1.6" fill="currentColor" stroke="none"/>' +
+    '</svg>',
+  ram: '<svg class="product-illustration" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="44" y="12" width="66" height="24" rx="4" stroke-width="2.4" stroke="var(--ink-soft)"/>' +
+    '<rect x="52" y="17" width="46" height="14" rx="2" stroke-width="1.8" stroke="var(--ink-soft)"/>' +
+    '<rect x="8" y="36" width="72" height="28" rx="5" stroke-width="2.6"/>' +
+    '<rect x="16" y="42" width="56" height="16" rx="3" stroke-width="2.2" fill="currentColor" fill-opacity="0.13"/>' +
+    '<path d="M16 50h56" stroke-width="2" stroke-dasharray="3 5" stroke="var(--ink-soft)"/>' +
+    '<path d="M13 64h62" stroke-width="4.6" stroke-dasharray="2.6 3.4" stroke="var(--ink-soft)"/>' +
+    '</svg>',
+  storage: '<svg class="product-illustration" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="16" y="32" width="88" height="28" rx="4" stroke-width="2.6"/>' +
+    '<rect x="26" y="22" width="50" height="48" rx="6" stroke-width="2.4" fill="currentColor" fill-opacity="0.13"/>' +
+    '<rect x="34" y="40" width="12" height="12" rx="2" stroke-width="1.8" stroke="var(--ink-soft)"/>' +
+    '<rect x="50" y="40" width="12" height="12" rx="2" stroke-width="1.8"/>' +
+    '<rect x="66" y="40" width="12" height="12" rx="2" stroke-width="1.8"/>' +
+    '<path d="M16 24h18" stroke-width="4.6" stroke="var(--ink-soft)"/>' +
+    '<circle cx="102" cy="46" r="2.6" stroke-width="2"/>' +
+    '</svg>',
+  motherboard: '<svg class="product-illustration" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="14" y="8" width="92" height="74" rx="7" stroke-width="2.6"/>' +
+    '<rect x="20" y="14" width="10" height="24" rx="2" stroke-width="2" fill="currentColor" fill-opacity="0.14"/>' +
+    '<rect x="20" y="44" width="10" height="18" rx="2" stroke-width="2"/>' +
+    '<rect x="44" y="14" width="28" height="28" rx="4" stroke-width="2.2"/>' +
+    '<rect x="51" y="21" width="14" height="14" rx="2" stroke-width="1.8" fill="currentColor" fill-opacity="0.13"/>' +
+    '<rect x="80" y="12" width="8" height="34" rx="2" stroke-width="2.2"/>' +
+    '<rect x="90" y="12" width="8" height="34" rx="2" stroke-width="2.2" fill="currentColor" fill-opacity="0.13"/>' +
+    '<path d="M40 58h52" stroke-width="5" stroke-dasharray="6 3" stroke="var(--ink-soft)"/>' +
+    '<path d="M40 70h34" stroke-width="5" stroke-dasharray="6 3" stroke="var(--ink-soft)"/>' +
+    '<rect x="84" y="58" width="15" height="15" rx="4" stroke-width="2.2" fill="currentColor" fill-opacity="0.13"/>' +
+    '</svg>',
+  psu: '<svg class="product-illustration" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="14" y="12" width="92" height="66" rx="7" stroke-width="2.6"/>' +
+    '<path d="M14 22h92" stroke-width="2" stroke="var(--ink-soft)"/>' +
+    '<circle cx="60" cy="52" r="19" stroke-width="2.6"/>' +
+    '<path d="M60 52V35.5M75.5 49.5 60 45M69 64.3l-8.5-6.7M51 66.5l9-14.5M44.5 49 60 45" stroke-width="2"/>' +
+    '<circle cx="60" cy="52" r="3.6" fill="currentColor" stroke="none"/>' +
+    '<rect x="22" y="15.5" width="7" height="5" rx="1" stroke-width="1.7"/>' +
+    '<rect x="32" y="15.5" width="7" height="5" rx="1" stroke-width="1.7"/>' +
+    '<rect x="42" y="15.5" width="7" height="5" rx="1" stroke-width="1.7"/>' +
+    '<rect x="52" y="15.5" width="7" height="5" rx="1" stroke-width="1.7"/>' +
+    '<rect x="79" y="15.5" width="9" height="5" rx="1" stroke-width="1.7" stroke="var(--ink-soft)"/>' +
+    '<path d="M95 15.5h6" stroke-width="1.7" stroke="var(--ink-soft)"/>' +
+    '</svg>',
+  case: '<svg class="product-illustration" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="30" y="8" width="56" height="70" rx="6" stroke-width="2.6"/>' +
+    '<path d="M37 14v58M43 14v58" stroke-width="2" stroke-dasharray="2 4.4" stroke="var(--ink-soft)"/>' +
+    '<rect x="52" y="16" width="28" height="54" rx="4" stroke-width="2.2"/>' +
+    '<circle cx="66" cy="28" r="7" stroke-width="2"/>' +
+    '<circle cx="66" cy="46" r="7" stroke-width="2" fill="currentColor" fill-opacity="0.13"/>' +
+    '<circle cx="66" cy="62" r="5.5" stroke-width="2" stroke="var(--ink-soft)"/>' +
+    '<circle cx="66" cy="14" r="1.6" fill="currentColor" stroke="none"/>' +
+    '<path d="M24 78h68" stroke-width="2.6"/>' +
+    '</svg>',
+  build: '<svg class="product-illustration" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="6" y="12" width="52" height="36" rx="5" stroke-width="2.6"/>' +
+    '<path d="M13 22h26M13 30h14M13 38h20" stroke-width="2.2" stroke="var(--ink-soft)"/>' +
+    '<path d="M32 48v12M20 60h24" stroke-width="2.6"/>' +
+    '<rect x="66" y="8" width="46" height="72" rx="6" stroke-width="2.6"/>' +
+    '<rect x="72" y="16" width="34" height="56" rx="4" stroke-width="2.2" fill="currentColor" fill-opacity="0.13"/>' +
+    '<circle cx="89" cy="30" r="8" stroke-width="2.2"/>' +
+    '<circle cx="89" cy="30" r="2.4" fill="currentColor" stroke="none"/>' +
+    '<circle cx="89" cy="50" r="8" stroke-width="2.2"/>' +
+    '<circle cx="89" cy="50" r="2.4" fill="currentColor" stroke="none"/>' +
+    '<path d="M76 64h26" stroke-width="2" stroke="var(--ink-soft)"/>' +
+    '</svg>'
 };
+
 
 const PRODUCTS = [
   {
@@ -179,7 +257,7 @@ const PRODUCTS = [
   {
     id: 19, category: 'build', brand: 'ЖЕЛЕЗО.МАРКЕТ', rating: 4.8, votes: 12,
     name: 'Сборка «Оптима»', nameEn: '"Optima" PC Build',
-    price: 319990, badge: null,
+    price: 229990, oldPrice: 319990, badge: 'discount',
     specs: { 'Процессор': 'Ryzen 7 9800X3D', 'Видеокарта': 'RTX 5070 12 ГБ', 'Память': '32 ГБ DDR5-6000', 'Накопитель': 'Samsung 9100 Pro 1 ТБ' },
     short: 'Игровой оптимум: 9800X3D плюс RTX 5070 — максимум FPS в QHD и запас на несколько лет.',
     shortEn: 'The gaming sweet spot: 9800X3D plus RTX 5070 — maximum QHD FPS with years of headroom.'
@@ -500,6 +578,33 @@ Object.assign(I18N.en, {
   'reviews.selectRating': 'Choose a rating'
 });
 
+Object.assign(I18N.ru, {
+  'hits.eyebrow': 'Популярное',
+  'hits.title': 'Хиты недели',
+  'hits.note': 'Комплектующие, которые заказывают чаще всего.',
+  'hits.button': 'Весь каталог',
+  'builds.eyebrow': 'Сборки',
+  'builds.title': 'Готовые сборки ПК',
+  'builds.note': 'Собраны, протестированы и готовы к отгрузке в день заказа.',
+  'builds.button': 'Все сборки в каталоге',
+  'home.reviews.eyebrow': 'Отзывы',
+  'home.reviews.title': 'Что говорят клиенты',
+  'home.reviews.button': 'Все отзывы'
+});
+Object.assign(I18N.en, {
+  'hits.eyebrow': 'Popular',
+  'hits.title': 'Weekly highlights',
+  'hits.note': 'The parts our customers order most often.',
+  'hits.button': 'Open the catalog',
+  'builds.eyebrow': 'Builds',
+  'builds.title': 'Pre-built PCs',
+  'builds.note': 'Assembled, stress-tested and ready to ship the same day.',
+  'builds.button': 'See all builds in the catalog',
+  'home.reviews.eyebrow': 'Reviews',
+  'home.reviews.title': 'What our customers say',
+  'home.reviews.button': 'All reviews'
+});
+
 const SPEC_KEYS_EN = {
   'Сокет': 'Socket', 'Ядра / потоки': 'Cores / threads', 'Частота': 'Clock', 'TDP': 'TDP',
   'Кэш 3D V-Cache': '3D V-Cache', 'Архитектура': 'Architecture', 'Видеопамять': 'VRAM',
@@ -784,6 +889,12 @@ if (popularGrid) {
   renderCards(popularGrid, PRODUCTS.filter((p) => p.badge === 'popular' && p.category !== 'case').slice(0, 6));
 }
 
+// Готовые сборки на главной
+const buildsGrid = document.getElementById('builds-grid');
+if (buildsGrid) {
+  renderCards(buildsGrid, PRODUCTS.filter((p) => p.category === 'build'));
+}
+
 // Похожие товары на странице товара
 const similarGrid = document.getElementById('similar-grid');
 if (similarGrid) {
@@ -1027,6 +1138,28 @@ if (logoutButton) {
 
 renderAccount();
 
+// ===================== Маска телефона =====================
+
+function maskPhoneInput(input) {
+  if (!input) return;
+  input.addEventListener('input', () => {
+    let digits = input.value.replace(/\D/g, '');
+    if (digits.startsWith('8')) digits = '7' + digits.slice(1);
+    if (digits && digits[0] !== '7') digits = '7' + digits;
+    digits = digits.slice(0, 11);
+    let value = '+7';
+    if (digits.length > 1) value += ' (' + digits.slice(1, 4);
+    if (digits.length >= 5) value += ') ' + digits.slice(4, 7);
+    if (digits.length >= 8) value += '-' + digits.slice(7, 9);
+    if (digits.length >= 10) value += '-' + digits.slice(9, 11);
+    input.value = digits.length <= 1 ? (digits.length === 1 ? '+7' : '') : value;
+    input.setCustomValidity('');
+  });
+}
+
+maskPhoneInput(document.getElementById('order-phone'));
+maskPhoneInput(document.getElementById('login-phone'));
+
 // ===================== Проверка форм =====================
 
 document.querySelectorAll('form[data-validate]').forEach((form) => {
@@ -1040,6 +1173,16 @@ document.querySelectorAll('form[data-validate]').forEach((form) => {
     elements.forEach((element) => {
       if (element.willValidate) element.removeAttribute('aria-invalid');
     });
+
+    const phoneField = form.querySelector('input[name="phone"]');
+    if (phoneField) {
+      const digits = phoneField.value.replace(/\D/g, '');
+      phoneField.setCustomValidity(
+        digits.length === 11
+          ? ''
+          : (isEn() ? 'Enter a valid phone number: +7 (900) 000-00-00' : 'Введите корректный телефон: +7 (900) 000-00-00')
+      );
+    }
 
     if (!form.checkValidity()) {
       elements.forEach((element) => {
@@ -1105,6 +1248,9 @@ function rerenderDynamic() {
   if (popularGrid) {
     renderCards(popularGrid, PRODUCTS.filter((p) => p.badge === 'popular' && p.category !== 'case').slice(0, 6));
   }
+  if (buildsGrid) {
+    renderCards(buildsGrid, PRODUCTS.filter((p) => p.category === 'build'));
+  }
   if (similarGrid) {
     const currentId = Number(new URLSearchParams(window.location.search).get('id'));
     const current = getProduct(currentId);
@@ -1147,9 +1293,19 @@ if (themeToggleButton) {
 const scrollTopButton = document.getElementById('scroll-top');
 
 if (scrollTopButton) {
-  window.addEventListener('scroll', () => {
+  const scrollProgressRing = scrollTopButton.querySelector('.scroll-top__ring');
+  const updateScrollProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    if (scrollProgressRing) {
+      const c = 2 * Math.PI * 21;
+      scrollProgressRing.setAttribute('stroke-dasharray', String(c));
+      scrollProgressRing.setAttribute('stroke-dashoffset', String(c * (1 - ratio)));
+    }
     scrollTopButton.classList.toggle('scroll-top--visible', window.scrollY > 500);
-  });
+  };
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
   scrollTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });

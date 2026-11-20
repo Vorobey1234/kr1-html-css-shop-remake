@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=remake-4">
-<script src="js/main.js?v=remake-4" defer></script>
+<link rel="stylesheet" href="css/style.css?v=remake-5">
+<script src="js/main.js?v=remake-5" defer></script>
 </head>
 <body data-cta="short">
 
@@ -35,7 +35,6 @@
       <ul class="site-nav__list">
         <li><a class="site-nav__link" href="index.html">Главная</a></li>
         <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-        <li><a class="site-nav__link" href="reviews.html">Отзывы</a></li>
         <li><a class="site-nav__link" href="about.html">О нас</a></li>
         <li><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
         <li><a class="site-nav__link" href="account.html">Кабинет</a></li>
@@ -122,12 +121,12 @@
       <form class="form-grid" action="#" method="post" data-validate novalidate>
         <div class="form-field">
           <label class="form-field__label form-field__label--required" for="feedback-name" data-i18n="feedback.name">Имя</label>
-          <input class="form-field__input" id="feedback-name" name="name" type="text" placeholder="Введите имя" data-i18n-placeholder="feedback.namePlaceholder" minlength="2" autocomplete="given-name" required>
+          <input class="form-field__input" id="feedback-name" name="name" type="text" placeholder="Введите имя" data-i18n-placeholder="feedback.namePlaceholder" minlength="2" autocomplete="off" required pattern="[A-Za-zА-Яа-яЁё\-\s]{2,}" title="Только буквы, минимум 2 символа">
           <small class="form-field__hint" data-i18n="feedback.nameHint">Введите имя (минимум 2 символа)</small>
         </div>
         <div class="form-field">
           <label class="form-field__label form-field__label--required" for="feedback-email" data-i18n="feedback.email">Электронная почта</label>
-          <input class="form-field__input" id="feedback-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+          <input class="form-field__input" id="feedback-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="off" required>
           <small class="form-field__hint" data-i18n="feedback.emailHint">Введите корректный адрес электронной почты</small>
         </div>
         <div class="form-field form-field--full">
@@ -203,7 +202,6 @@
         <ul class="site-footer__list">
           <li><a class="site-footer__link" href="index.html">Главная</a></li>
           <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
-          <li><a class="site-footer__link" href="reviews.html">Отзывы</a></li>
           <li><a class="site-footer__link" href="about.html">О нас</a></li>
           <li><a class="site-footer__link" href="account.html">Кабинет</a></li>
         </ul>
@@ -239,7 +237,14 @@
 </footer>
 
 <button class="scroll-top" id="scroll-top" type="button" aria-label="Наверх">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <svg class="scroll-top__progress" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+    <circle class="scroll-top__track" cx="24" cy="24" r="21"/>
+    <circle class="scroll-top__ring" cx="24" cy="24" r="21"/>
+  </svg>
+  <svg class="scroll-top__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="7.5" y="2.5" width="9" height="19" rx="4.5" stroke-width="1.7"/>
+    <path class="scroll-top__wheel" d="M12 6v4" stroke-width="1.7"/>
+  </svg>
 </button>
 
 <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
@@ -251,23 +256,23 @@
       </button>
     </div>
     <p class="order-dialog__note" data-i18n="dialog.note">Оставьте контакты — перезвоним в течение 15 минут в рабочее время и подтвердим заказ.</p>
-    <form class="form-grid" id="order-form" action="#" method="post" data-validate novalidate>
+    <form class="form-grid" id="order-form" action="#" method="post" data-validate novalidate autocomplete="off">
       <div class="form-field form-field--full">
         <label class="form-field__label form-field__label--required" for="order-product" data-i18n="dialog.product">Товар</label>
         <select class="form-field__select" id="order-product" name="product" required></select>
       </div>
       <div class="form-field">
         <label class="form-field__label form-field__label--required" for="order-name" data-i18n="dialog.name">Имя</label>
-        <input class="form-field__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" data-i18n-placeholder="dialog.namePlaceholder" minlength="2" autocomplete="given-name" required>
+        <input class="form-field__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" data-i18n-placeholder="dialog.namePlaceholder" minlength="2" autocomplete="off" required pattern="[A-Za-zА-Яа-яЁё\-\s]{2,}" title="Только буквы, минимум 2 символа">
       </div>
       <div class="form-field">
         <label class="form-field__label form-field__label--required" for="order-phone" data-i18n="dialog.phone">Телефон</label>
-        <input class="form-field__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+        <input class="form-field__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" required>
         <small class="form-field__hint" data-i18n="dialog.phoneHint">Формат: +7 (900) 000-00-00</small>
       </div>
       <div class="form-field">
         <label class="form-field__label form-field__label--required" for="order-email" data-i18n="dialog.email">E-mail</label>
-        <input class="form-field__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+        <input class="form-field__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="off" required>
       </div>
       <div class="form-field">
         <label class="form-field__label" for="order-delivery" data-i18n="dialog.delivery">Доставка</label>
