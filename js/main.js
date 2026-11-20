@@ -112,6 +112,7 @@ const IMAGES = {
 const PRODUCTS = [
   {
     id: 1, category: 'cpu', brand: 'AMD', rating: 4.9, votes: 163,
+    image: 'images/products/p1_9600x.jpg',
     name: 'Процессор AMD Ryzen 5 9600X', nameEn: 'AMD Ryzen 5 9600X Processor',
     price: 17990, badge: 'popular',
     specs: { 'Сокет': 'AM5', 'Ядра / потоки': '6 / 12', 'Частота': 'до 5.4 ГГц', 'TDP': '65 Вт' },
@@ -120,6 +121,7 @@ const PRODUCTS = [
   },
   {
     id: 2, category: 'cpu', brand: 'Intel', rating: 4.7, votes: 95,
+    image: 'images/products/p2_245k.jpg',
     name: 'Процессор Intel Core Ultra 5 245K', nameEn: 'Intel Core Ultra 5 245K Processor',
     price: 19990, badge: 'fast',
     specs: { 'Сокет': 'LGA 1851', 'Ядра / потоки': '14 / 14 (6P + 8E)', 'Частота': 'до 5.2 ГГц', 'TDP': '125 Вт' },
@@ -128,6 +130,7 @@ const PRODUCTS = [
   },
   {
     id: 3, category: 'cpu', brand: 'AMD', rating: 5.0, votes: 212,
+    image: 'images/products/p3_9800x3d.jpg',
     name: 'Процессор AMD Ryzen 7 9800X3D', nameEn: 'AMD Ryzen 7 9800X3D Processor',
     price: 44990, badge: 'popular',
     specs: { 'Сокет': 'AM5', 'Ядра / потоки': '8 / 16', 'Частота': 'до 5.2 ГГц', 'TDP': '120 Вт', 'Кэш 3D V-Cache': '96 МБ' },
@@ -136,6 +139,7 @@ const PRODUCTS = [
   },
   {
     id: 4, category: 'gpu', brand: 'NVIDIA', rating: 4.9, votes: 183,
+    image: 'images/products/p4_5060.jpg',
     name: 'Видеокарта NVIDIA RTX 5060 8 ГБ GDDR7', nameEn: 'NVIDIA RTX 5060 8 GB GDDR7 Graphics Card',
     price: 34990, badge: 'popular',
     specs: { 'Архитектура': 'Blackwell', 'Видеопамять': '8 ГБ GDDR7', 'DLSS': '4, генерация кадров', 'Рекомендуемый БП': '550 Вт' },
@@ -144,6 +148,7 @@ const PRODUCTS = [
   },
   {
     id: 5, category: 'gpu', brand: 'NVIDIA', rating: 4.9, votes: 129,
+    image: 'images/products/p5_5070.png',
     name: 'Видеокарта NVIDIA RTX 5070 12 ГБ GDDR7', nameEn: 'NVIDIA RTX 5070 12 GB GDDR7 Graphics Card',
     price: 104990, badge: null,
     specs: { 'Архитектура': 'Blackwell', 'Видеопамять': '12 ГБ GDDR7', 'Шина': '192 бит', 'Рекомендуемый БП': '650 Вт' },
@@ -152,6 +157,7 @@ const PRODUCTS = [
   },
   {
     id: 6, category: 'gpu', brand: 'NVIDIA', rating: 4.9, votes: 76,
+    image: 'images/products/p6_5080.png',
     name: 'Видеокарта NVIDIA RTX 5080 16 ГБ GDDR7', nameEn: 'NVIDIA RTX 5080 16 GB GDDR7 Graphics Card',
     price: 139990, badge: 'fast',
     specs: { 'Архитектура': 'Blackwell', 'Видеопамять': '16 ГБ GDDR7', 'Шина': '256 бит', 'Рекомендуемый БП': '850 Вт' },
@@ -160,6 +166,7 @@ const PRODUCTS = [
   },
   {
     id: 7, category: 'gpu', brand: 'AMD', rating: 4.8, votes: 141,
+    image: 'images/products/p7_9070xt.jpg',
     name: 'Видеокарта AMD Radeon RX 9070 XT 16 ГБ', nameEn: 'AMD Radeon RX 9070 XT 16 GB Graphics Card',
     price: 99990, badge: 'fast',
     specs: { 'Архитектура': 'RDNA 4', 'Видеопамять': '16 ГБ GDDR6', 'FSR': '4, с апскейлом ML', 'Рекомендуемый БП': '750 Вт' },
@@ -168,6 +175,7 @@ const PRODUCTS = [
   },
   {
     id: 8, category: 'ram', brand: 'Kingston', rating: 4.8, votes: 117,
+    image: 'images/products/p8_fury.jpg',
     name: 'Память Kingston FURY Beast 32 ГБ DDR5-6000', nameEn: 'Kingston FURY Beast 32 GB DDR5-6000 Memory Kit',
     price: 12990, badge: 'popular',
     specs: { 'Объём': '32 ГБ (2 x 16 ГБ)', 'Тип': 'DDR5', 'Частота': '6000 МГц', 'Профили': 'AMD EXPO / Intel XMP 3.0' },
@@ -176,6 +184,7 @@ const PRODUCTS = [
   },
   {
     id: 9, category: 'ram', brand: 'ADATA', rating: 4.9, votes: 54,
+    image: 'images/products/p9_lancer.jpg',
     name: 'Память ADATA XPG Lancer 16 ГБ DDR5-6000', nameEn: 'ADATA XPG Lancer 16 GB DDR5-6000 Memory Kit',
     price: 6490, badge: null,
     specs: { 'Объём': '16 ГБ (2 x 8 ГБ)', 'Тип': 'DDR5', 'Частота': '6000 МГц', 'Профили': 'AMD EXPO' },
@@ -184,6 +193,7 @@ const PRODUCTS = [
   },
   {
     id: 10, category: 'storage', brand: 'Samsung', rating: 4.9, votes: 205,
+    image: 'images/products/p10_9100pro.jpg',
     name: 'SSD Samsung 9100 PRO 1 ТБ PCIe 5.0', nameEn: 'Samsung 9100 PRO 1 TB PCIe 5.0 SSD',
     price: 27990, badge: 'fast',
     specs: { 'Интерфейс': 'PCIe 5.0 x4', 'Объём': '1 ТБ', 'Чтение / запись': '14 800 / 13 400 МБ/с', 'Ресурс': '600 ТБ' },
@@ -192,6 +202,7 @@ const PRODUCTS = [
   },
   {
     id: 11, category: 'storage', brand: 'Kingston', rating: 4.6, votes: 118,
+    image: 'images/products/p11_nv3.jpg',
     name: 'SSD Kingston NV3 2 ТБ PCIe 4.0', nameEn: 'Kingston NV3 2 TB PCIe 4.0 SSD',
     price: 9290, oldPrice: 10990, badge: 'discount',
     specs: { 'Интерфейс': 'PCIe 4.0 x4', 'Объём': '2 ТБ', 'Чтение / запись': '6000 / 5000 МБ/с', 'Ресурс': '640 ТБ' },
@@ -200,6 +211,7 @@ const PRODUCTS = [
   },
   {
     id: 12, category: 'motherboard', brand: 'MSI', rating: 4.8, votes: 93,
+    image: 'images/products/p12_b850.webp',
     name: 'Материнская плата MSI B850 Gaming Plus WiFi', nameEn: 'MSI B850 Gaming Plus WiFi Motherboard',
     price: 22690, badge: null,
     specs: { 'Сокет': 'AM5', 'Память': '4 x DDR5', 'M.2': '3 слота, Gen5 для видеокарты', 'Сеть': 'Wi-Fi 7 + 2.5 Гбит/с' },
@@ -208,6 +220,7 @@ const PRODUCTS = [
   },
   {
     id: 13, category: 'motherboard', brand: 'MSI', rating: 4.7, votes: 48,
+    image: 'images/products/p13_b860m.webp',
     name: 'Материнская плата MSI PRO B860M-A WiFi', nameEn: 'MSI PRO B860M-A WiFi Motherboard',
     price: 16990, badge: null,
     specs: { 'Сокет': 'LGA 1851', 'Память': '4 x DDR5', 'M.2': '3 слота PCIe 4.0', 'Сеть': 'Wi-Fi + 2.5 Гбит/с' },
@@ -216,6 +229,7 @@ const PRODUCTS = [
   },
   {
     id: 14, category: 'psu', brand: 'be quiet!', rating: 4.9, votes: 145,
+    image: 'images/products/p14_purepower.jpg',
     name: 'Блок питания be quiet! Pure Power 12 M 850 Вт ATX 3.1', nameEn: 'be quiet! Pure Power 12 M 850 W ATX 3.1 PSU',
     price: 11990, badge: 'popular',
     specs: { 'Мощность': '850 Вт', 'Сертификат': '80 PLUS Gold', 'Кабели': 'полностью модульные', 'Гарантия': '5 лет' },
@@ -224,6 +238,7 @@ const PRODUCTS = [
   },
   {
     id: 15, category: 'psu', brand: 'DeepCool', rating: 4.8, votes: 69,
+    image: 'images/products/p15_pq850m.webp',
     name: 'Блок питания DeepCool PQ850M 850 Вт ATX 3.1', nameEn: 'DeepCool PQ850M 850 W ATX 3.1 PSU',
     price: 10990, badge: null,
     specs: { 'Мощность': '850 Вт', 'Сертификат': '80 PLUS Gold', 'Кабели': 'модульные', 'Гарантия': '10 лет' },
@@ -232,6 +247,7 @@ const PRODUCTS = [
   },
   {
     id: 16, category: 'case', brand: 'DeepCool', rating: 4.8, votes: 152,
+    image: 'images/products/p16_ch510.jpg',
     name: 'Корпус DeepCool CH510 Mesh', nameEn: 'DeepCool CH510 Mesh Case',
     price: 7490, badge: 'fast',
     specs: { 'Форм-фактор': 'Mid-Tower, E-ATX', 'Вентиляторы': 'в комплекте 1 x 140 мм', 'Панель': 'сетчатая передняя', 'Охлаждение СЖО': 'до 360 мм' },
@@ -240,6 +256,7 @@ const PRODUCTS = [
   },
   {
     id: 17, category: 'case', brand: 'Lian Li', rating: 4.9, votes: 198,
+    image: 'images/products/p17_lancool.jpg',
     name: 'Корпус Lian Li Lancool 216', nameEn: 'Lian Li Lancool 216 Case',
     price: 10990, badge: 'popular',
     specs: { 'Форм-фактор': 'Mid-Tower, E-ATX', 'Вентиляторы': '2 x 160 мм в комплекте', 'Панель': 'сетчатая + стекло', 'Охлаждение СЖО': 'до 360 мм' },
@@ -248,6 +265,7 @@ const PRODUCTS = [
   },
   {
     id: 18, category: 'build', brand: 'ЖЕЛЕЗО.МАРКЕТ', rating: 4.9, votes: 26,
+    image: 'images/products/p18_start.jpg',
     name: 'Сборка «Старт»', nameEn: '"Starter" PC Build',
     price: 114990, badge: 'popular',
     specs: { 'Процессор': 'Ryzen 5 9600X', 'Видеокарта': 'RTX 5060 8 ГБ', 'Память': '32 ГБ DDR5-6000', 'Накопитель': 'SSD 1 ТБ NVMe' },
@@ -256,6 +274,7 @@ const PRODUCTS = [
   },
   {
     id: 19, category: 'build', brand: 'ЖЕЛЕЗО.МАРКЕТ', rating: 4.8, votes: 12,
+    image: 'images/products/p19_optima.jpg',
     name: 'Сборка «Оптима»', nameEn: '"Optima" PC Build',
     price: 229990, oldPrice: 319990, badge: 'discount',
     specs: { 'Процессор': 'Ryzen 7 9800X3D', 'Видеокарта': 'RTX 5070 12 ГБ', 'Память': '32 ГБ DDR5-6000', 'Накопитель': 'Samsung 9100 Pro 1 ТБ' },
@@ -264,6 +283,7 @@ const PRODUCTS = [
   },
   {
     id: 20, category: 'build', brand: 'ЖЕЛЕЗО.МАРКЕТ', rating: 5.0, votes: 8,
+    image: 'images/products/p20_extreme.jpg',
     name: 'Сборка «Экстрим»', nameEn: '"Extreme" PC Build',
     price: 389990, oldPrice: 409990, badge: 'discount',
     specs: { 'Процессор': 'Ryzen 7 9800X3D', 'Видеокарта': 'RTX 5080 16 ГБ', 'Память': '64 ГБ DDR5-6000', 'Накопитель': 'SSD 2 ТБ PCIe 5.0' },
@@ -700,6 +720,8 @@ function applyI18n() {
   if (scrollTopButton2) scrollTopButton2.setAttribute('aria-label', t('scrolltop'));
   const langToggle = document.getElementById('lang-toggle');
   if (langToggle) langToggle.textContent = LANG.value === 'ru' ? 'EN' : 'RU';
+  const currencyToggle = document.getElementById('currency-toggle');
+  if (currencyToggle) currencyToggle.textContent = (CURRENCIES[currencyState.value] || CURRENCIES.rub).symbol;
   const pageKey = (location.pathname.split('/').pop() || 'index.html').replace('.html', '');
   if (TITLES[LANG.value] && TITLES[LANG.value][pageKey]) document.title = TITLES[LANG.value][pageKey];
 }
@@ -720,12 +742,55 @@ if (langToggleButton) {
   });
 }
 
+const currencyToggleButton = document.getElementById('currency-toggle');
+if (currencyToggleButton) {
+  currencyToggleButton.addEventListener('click', () => {
+    const keys = Object.keys(CURRENCIES);
+    const next = keys[(keys.indexOf(currencyState.value) + 1) % keys.length];
+    setCurrency(next);
+  });
+}
+
 LANG.value = localStorage.getItem(LANG_STORAGE_KEY) || 'ru';
 
 // ===================== Рендер карточек =====================
 
 const getProduct = (id) => PRODUCTS.find((product) => product.id === Number(id)) || PRODUCTS[0];
-const formatPrice = (value) => value.toLocaleString(isEn() ? 'en-US' : 'ru-RU');
+// ===================== Валюты =====================
+
+const CURRENCIES = {
+  rub: { symbol: '₽', rate: 1 },
+  usd: { symbol: '$', rate: 1 / 82 },
+  eur: { symbol: '€', rate: 1 / 95 }
+};
+const CURRENCY_KEY = 'currency';
+const currencyState = { value: CURRENCIES[localStorage.getItem(CURRENCY_KEY)] ? localStorage.getItem(CURRENCY_KEY) : 'rub' };
+
+const formatPrice = (value, currency) => {
+  const key = currency || currencyState.value;
+  const conf = CURRENCIES[key] || CURRENCIES.rub;
+  const converted = key === 'rub' ? value : Math.round(value * conf.rate);
+  return converted.toLocaleString(isEn() ? 'en-US' : 'ru-RU') + ' ' + conf.symbol;
+};
+
+function setCurrency(next) {
+  if (!CURRENCIES[next]) return;
+  currencyState.value = next;
+  localStorage.setItem(CURRENCY_KEY, next);
+  applyI18n();
+  rerenderDynamic();
+}
+
+function renderHeroPrice() {
+  const el = document.getElementById('hero-panel-price');
+  if (!el) return;
+  const product = PRODUCTS.find((p) => p.id === 19);
+  if (!product) return;
+  el.innerHTML = (product.oldPrice
+    ? '<s class="hero__panel-old-price">' + formatPrice(product.oldPrice) + '</s> '
+    : '') + formatPrice(product.price) +
+    '<small data-i18n="panel.priceNote">' + t('panel.priceNote') + '</small>';
+}
 
 function renderStars(rating) {
   const full = Math.floor(rating);
@@ -743,13 +808,15 @@ function renderCard(product) {
   const specs = Object.values(product.specs).slice(0, 2)
     .map((value) => '<span class="product-card__spec">' + translateValue(value) + '</span>').join('');
   const oldPrice = product.oldPrice
-    ? '<s class="product-card__old-price">' + formatPrice(product.oldPrice) + ' ₽</s>'
+    ? '<s class="product-card__old-price">' + formatPrice(product.oldPrice) + '</s>'
     : '';
   return (
     '<article class="product-card" data-category="' + product.category + '" data-price="' + product.price + '" data-rating="' + product.rating + '" data-votes="' + product.votes + '">' +
     '<div class="product-card__image">' +
     '<div class="product-card__badges">' + renderBadge(product) + '</div>' +
-    IMAGES[product.category] +
+    (product.image
+      ? '<img class="product-card__photo" src="' + product.image + '" alt="' + productName(product) + '" loading="lazy">'
+      : IMAGES[product.category]) +
     '</div>' +
     '<div class="product-card__body">' +
     '<div class="product-card__topline"><span class="product-card__brand">' + product.brand + '</span>' +
@@ -759,7 +826,7 @@ function renderCard(product) {
     '<h3 class="product-card__title"><a class="product-card__link" href="product.html?id=' + product.id + '">' + productName(product) + '</a></h3>' +
     '<div class="product-card__specs">' + specs + '</div>' +
     '<div class="product-card__meta">' +
-    '<span class="product-card__price">' + formatPrice(product.price) + ' ₽</span>' + oldPrice +
+    '<span class="product-card__price">' + formatPrice(product.price) + '</span>' + oldPrice +
     '</div>' +
     '<div class="product-card__actions">' +
     '<a class="button button--sm" href="product.html?id=' + product.id + '">' + t('product.more') + '</a>' +
@@ -953,13 +1020,15 @@ function renderProductPage(product) {
   document.getElementById('product-category-link').setAttribute('href', 'catalog.html?category=' + product.category);
   document.getElementById('product-category-link-text').textContent =
     (isEn() ? 'Category: ' : 'Категория: ') + catName;
-  document.getElementById('product-image').innerHTML = IMAGES[product.category];
+  document.getElementById('product-image').innerHTML = product.image
+    ? '<img class="product-page__photo" src="' + product.image + '" alt="' + productName(product) + '">'
+    : IMAGES[product.category];
   document.getElementById('product-badges').innerHTML = renderBadge(product);
   document.getElementById('product-title').textContent = productName(product);
-  document.getElementById('product-price').textContent = formatPrice(product.price) + ' ₽';
+  document.getElementById('product-price').textContent = formatPrice(product.price);
 
   const oldPriceElement = document.getElementById('product-old-price');
-  oldPriceElement.textContent = product.oldPrice ? formatPrice(product.oldPrice) + ' ₽' : '';
+  oldPriceElement.textContent = product.oldPrice ? formatPrice(product.oldPrice) : '';
   oldPriceElement.hidden = !product.oldPrice;
 
   document.getElementById('product-short').textContent = productShort(product);
@@ -1001,7 +1070,7 @@ function fillOrderSelect() {
   if (!orderProductInput || !orderProductInput.options.length) {
     if (orderProductInput) {
       orderProductInput.innerHTML = PRODUCTS
-        .map((product) => '<option value="' + product.id + '">' + productName(product) + ' - ' + formatPrice(product.price) + ' ₽</option>')
+        .map((product) => '<option value="' + product.id + '">' + productName(product) + ' - ' + formatPrice(product.price) + '</option>')
         .join('');
     }
   }
@@ -1236,7 +1305,7 @@ function rerenderDynamic() {
   if (orderProductInput) {
     const selected = orderProductInput.value;
     orderProductInput.innerHTML = PRODUCTS
-      .map((product) => '<option value="' + product.id + '">' + productName(product) + ' - ' + formatPrice(product.price) + ' ₽</option>')
+      .map((product) => '<option value="' + product.id + '">' + productName(product) + ' - ' + formatPrice(product.price) + '</option>')
       .join('');
     orderProductInput.value = selected || String(PRODUCTS[0].id);
   }
@@ -1269,6 +1338,7 @@ function rerenderDynamic() {
   observeRevealCards();
   const filtersTitle = document.querySelector('#filters-form .filters__title');
   renderAccount();
+  renderHeroPrice();
 }
 
 // ===================== Тема =====================
@@ -1425,3 +1495,4 @@ if (statValues.length && 'IntersectionObserver' in window
 // ===================== Запуск i18n =====================
 
 applyI18n();
+renderHeroPrice();
