@@ -554,9 +554,9 @@ button {
 /* Панель сборки в hero */
 
 .hero__panel {
-  background: var(--ink);
-  color: var(--paper);
-  border: var(--border);
+  background: #15161a;
+  color: #f2f1ec;
+  border: 1.5px solid #f2f1ec;
   border-radius: var(--radius);
   box-shadow: 10px 10px 0 var(--shadow);
   overflow: hidden;
@@ -626,7 +626,7 @@ button {
 }
 
 .hero__panel .button {
-  border-color: var(--paper);
+  border-color: #f2f1ec;
 }
 
 /* ---------- Категории (плитки) ---------- */
@@ -1909,9 +1909,9 @@ button {
 
 .site-footer {
   margin-top: 24px;
-  background: var(--ink);
-  color: var(--paper);
-  border-top: var(--border);
+  background: #15161a;
+  color: #f2f1ec;
+  border-top: 1.5px solid #15161a;
 }
 
 .site-footer__grid {
