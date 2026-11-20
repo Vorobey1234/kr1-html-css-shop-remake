@@ -802,7 +802,7 @@ button {
 
 .product-card[data-category="build"] .product-card__image {
   --cat: var(--accent);
-  background: #15161a;
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
 }
 
 .product-card[data-category="build"] .product-card__image svg {
@@ -816,12 +816,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 6px;
-}
-
-.product-card[data-category="build"] .badge-tag {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-ink);
 }
 
 .product-card__body {
@@ -1277,7 +1271,7 @@ button {
 
 .product-page[data-category="build"] .product-page__image {
   --cat: var(--accent);
-  background: #15161a;
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
 }
 
 .product-page__image svg {
@@ -2691,5 +2685,100 @@ button {
   .account-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* ===================== Каталог: цветовая идентификация и детали ===================== */
+
+/* --cat на уровне карточки — для бренда, обводки и ховера */
+.product-card[data-category="cpu"] { --cat: var(--cat-cpu); }
+.product-card[data-category="gpu"] { --cat: var(--cat-gpu); }
+.product-card[data-category="ram"] { --cat: var(--cat-ram); }
+.product-card[data-category="storage"] { --cat: var(--cat-storage); }
+.product-card[data-category="motherboard"] { --cat: var(--cat-motherboard); }
+.product-card[data-category="psu"] { --cat: var(--cat-psu); }
+.product-card[data-category="case"] { --cat: var(--cat-case); }
+.product-card[data-category="build"] { --cat: var(--accent); }
+
+/* Точечная сетка в графической зоне, в цвет категории */
+.product-card__image {
+  background-image: radial-gradient(color-mix(in srgb, var(--cat, var(--ink-soft)) 35%, transparent) 1.2px, transparent 1.3px);
+  background-size: 15px 15px;
+}
+
+.product-page__image {
+  background-image: radial-gradient(color-mix(in srgb, var(--cat, var(--ink-soft)) 30%, transparent) 1.1px, transparent 1.2px);
+  background-size: 17px 17px;
+}
+
+/* Бренд в цвет категории с ромбом-маркером */
+.product-card__brand {
+  color: var(--cat, var(--muted));
+}
+
+.product-card__brand::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+
+.product-card__rating-value {
+  font-weight: 700;
+}
+
+/* Ховер: рамка в цвет категории + лёгкий зум иконки */
+.product-card:hover {
+  border-color: var(--cat, var(--accent));
+}
+
+.product-card__image svg {
+  transition: color 0.35s ease, transform 0.25s ease;
+}
+
+.product-card:hover .product-card__image svg {
+  transform: scale(1.08);
+}
+
+/* Бейджи: заливка цветом категории на 14% */
+.badge-tag {
+  background: color-mix(in srgb, currentColor 14%, var(--surface));
+}
+
+/* Тулбар и фильтры: акцентные префиксы и фокусы */
+.catalog-toolbar__title::before {
+  content: "// ";
+  color: var(--accent);
+}
+
+.filters__title::before {
+  content: "// ";
+  color: var(--accent);
+}
+
+.filter-option:hover {
+  color: var(--accent);
+}
+
+.filter-option:has(input:checked) {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.catalog-search__input:focus {
+  border-color: var(--accent);
+}
+
+.catalog-sort:hover {
+  border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card__image svg,
+  .product-card {
+    transition: none;
   }
 }
