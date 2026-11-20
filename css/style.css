@@ -540,8 +540,8 @@ button {
 }
 
 .hero__float--2 {
-  top: 46%;
-  right: 46%;
+  top: 24px;
+  left: 56%;
   transform: rotate(3deg);
 }
 
