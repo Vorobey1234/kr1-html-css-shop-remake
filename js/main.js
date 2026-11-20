@@ -268,44 +268,6 @@ function renderCards(grid, list) {
 const catalogGrid = document.getElementById('products-grid');
 if (catalogGrid) renderCards(catalogGrid, PRODUCTS);
 
-// Популярные на главной
-const popularGrid = document.getElementById('popular-grid');
-if (popularGrid) {
-  renderCards(popularGrid, PRODUCTS.filter((product) => product.badge === 'popular' && product.category !== 'case').slice(0, 6));
-}
-
-// Сборки на главной
-function renderBuildCard(product) {
-  const oldPrice = product.oldPrice
-    ? '<s class="build-card__old-price">' + formatPrice(product.oldPrice) + ' ₽</s>'
-    : '';
-  return (
-    '<article class="build-card' + (product.badge === 'discount' ? ' build-card--featured' : '') + '"' +
-    ' data-product="' + product.id + '" style="cursor: pointer">' +
-    '<p class="build-card__tier">// Готовая сборка</p>' +
-    '<h3 class="build-card__title"><a href="product.html?id=' + product.id + '">' + product.name + '</a></h3>' +
-    '<p class="build-card__target">' + product.short + '</p>' +
-    '<ul class="build-card__list">' +
-    Object.entries(product.specs).map((entry) =>
-      '<li class="build-card__item"><span>' + entry[0] + '</span><span>' + entry[1] + '</span></li>'
-    ).join('') +
-    '</ul>' +
-    '<div class="build-card__footer">' +
-    '<p class="build-card__price">' + oldPrice + formatPrice(product.price) + ' ₽</p>' +
-    '<button class="button button--sm" type="button" data-product="' + product.id + '">Заказать</button>' +
-    '</div>' +
-    '</article>'
-  );
-}
-
-const buildsGrid = document.getElementById('builds-grid');
-if (buildsGrid) {
-  buildsGrid.innerHTML = PRODUCTS
-    .filter((product) => product.category === 'build')
-    .map(renderBuildCard)
-    .join('');
-}
-
 // Похожие товары на странице товара
 const similarGrid = document.getElementById('similar-grid');
 if (similarGrid) {
@@ -452,8 +414,6 @@ function closeOrderDialog() {
 }
 
 document.addEventListener('click', (event) => {
-  const link = event.target.closest('.build-card a');
-  if (link) return;
   const button = event.target.closest('[data-product]');
   if (button) {
     const id = button.dataset.product;
@@ -562,7 +522,7 @@ if (revealSections.length && 'IntersectionObserver' in window) {
   revealSections.forEach((section) => revealObserver.observe(section));
 }
 
-const revealCards = document.querySelectorAll('.product-card, .advantage-card, .build-card, .info-card, .review-card, .cat-tile');
+const revealCards = document.querySelectorAll('.product-card, .advantage-card, .info-card, .review-card, .cat-tile');
 if (revealCards.length && 'IntersectionObserver' in window) {
   revealCards.forEach((card) => card.classList.add('reveal-card'));
   const cardObserver = new IntersectionObserver((entries, observer) => {
