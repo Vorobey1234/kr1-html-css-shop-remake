@@ -1362,20 +1362,21 @@ if (themeToggleButton) {
 
 const scrollTopButton = document.getElementById('scroll-top');
 
-if (scrollTopButton) {
-  const scrollProgressRing = scrollTopButton.querySelector('.scroll-top__ring');
-  const updateScrollProgress = () => {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const ratio = max > 0 ? Math.min(1, window.scrollY / max) : 0;
-    if (scrollProgressRing) {
-      const c = 2 * Math.PI * 21;
-      scrollProgressRing.setAttribute('stroke-dasharray', String(c));
-      scrollProgressRing.setAttribute('stroke-dashoffset', String(c * (1 - ratio)));
-    }
+const scrollProgressBar = document.getElementById('scroll-progress');
+
+function updateScrollProgress() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const ratio = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+  if (scrollProgressBar) scrollProgressBar.style.transform = 'scaleX(' + ratio + ')';
+  if (scrollTopButton) {
     scrollTopButton.classList.toggle('scroll-top--visible', window.scrollY > 500);
-  };
-  window.addEventListener('scroll', updateScrollProgress, { passive: true });
-  updateScrollProgress();
+  }
+}
+
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+updateScrollProgress();
+
+if (scrollTopButton) {
   scrollTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
