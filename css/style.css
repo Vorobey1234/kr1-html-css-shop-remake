@@ -2313,6 +2313,20 @@ button {
   transition-duration: 0.01ms !important;
 }
 
+/* Плавная смена темы: кроссфейд всей страницы через View Transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.55s;
+  animation-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

@@ -1349,13 +1349,21 @@ document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'
 
 if (themeToggleButton) {
   themeToggleButton.addEventListener('click', () => {
-    const nextTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     const root = document.documentElement;
-    root.classList.add('theme-transition');
-    window.clearTimeout(window.__themeTimer);
-    window.__themeTimer = window.setTimeout(() => root.classList.remove('theme-transition'), 500);
-    root.setAttribute('data-theme', nextTheme);
-    localStorage.setItem('theme', nextTheme);
+    const nextTheme = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    const applyTheme = () => {
+      root.classList.add('theme-transition');
+      window.clearTimeout(window.__themeTimer);
+      window.__themeTimer = window.setTimeout(() => root.classList.remove('theme-transition'), 500);
+      root.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('theme', nextTheme);
+    };
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (document.startViewTransition && !reducedMotion) {
+      document.startViewTransition(applyTheme);
+    } else {
+      applyTheme();
+    }
   });
 }
 
