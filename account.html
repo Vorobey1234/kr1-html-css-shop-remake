@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=remake-15">
-<script src="js/main.js?v=remake-15" defer></script>
+<link rel="stylesheet" href="css/style.css?v=remake-16">
+<script src="js/main.js?v=remake-16" defer></script>
 </head>
 <body data-cta="short">
 
@@ -75,11 +75,11 @@
     <div class="account-guest" id="account-guest">
       <div class="form-card">
         <h2 class="form-card__title" data-i18n="account.guestTitle">Войти в кабинет</h2>
-        <p class="form-card__text" data-i18n="account.guestText">Введите имя и телефон, использованные при заказе — покажем статусы ваших заказов.</p>
+        <p class="form-card__text" data-i18n="account.guestText">Введите логин и телефон, использованные при заказе — покажем статусы ваших заказов.</p>
         <form class="form-grid" id="login-form" action="#" method="post" novalidate>
           <div class="form-field">
-            <label class="form-field__label form-field__label--required" for="login-name" data-i18n="account.name">Имя</label>
-            <input class="form-field__input" id="login-name" name="name" type="text" placeholder="Введите имя" data-i18n-placeholder="account.namePlaceholder" minlength="2" autocomplete="given-name" required pattern="[A-Za-zА-Яа-яЁё\-\s]{2,}" title="Только буквы, минимум 2 символа">
+            <label class="form-field__label form-field__label--required" for="login-name" data-i18n="account.name">Логин</label>
+            <input class="form-field__input" id="login-name" name="name" type="text" placeholder="Введите логин" data-i18n-placeholder="account.namePlaceholder" minlength="2" maxlength="30" autocomplete="username" required pattern="(?=.*[A-Za-zА-Яа-яЁё])[A-Za-zА-Яа-яЁё0-9\-\s_]{2,}" title="Обязательно буквы; цифры можно добавить">
           </div>
           <div class="form-field">
             <label class="form-field__label form-field__label--required" for="login-phone" data-i18n="account.phone">Телефон</label>
