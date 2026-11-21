@@ -81,10 +81,6 @@ body {
   transition: background-color 0.35s ease, color 0.35s ease;
 }
 
-.site-footer {
-  margin-top: auto;
-}
-
 img,
 svg {
   display: block;
@@ -130,6 +126,7 @@ button {
 }
 
 .main {
+  flex: 1 0 auto;
   padding-bottom: 24px;
 }
 
@@ -1911,7 +1908,7 @@ button {
 /* ---------- Подвал ---------- */
 
 .site-footer {
-  margin-top: 24px;
+  margin-top: auto;
   background: #15161a;
   color: #f2f1ec;
   border-top: 1.5px solid #15161a;
