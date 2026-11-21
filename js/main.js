@@ -322,7 +322,7 @@ const I18N = {
     'catalog.title': 'Каталог товаров',
     'catalog.hint': 'Комплектующие и сборки в наличии. Нажмите «Заказать», чтобы оформить покупку.',
     'catalog.searchPlaceholder': 'Поиск по каталогу…',
-    'filters.category': 'Категория', 'filters.price': 'Стоимость',
+    'filters.toggle': 'Фильтры', 'filters.category': 'Категория', 'filters.price': 'Стоимость',
     'filters.any': 'Любая', 'filters.reset': 'Сбросить фильтры',
     'filters.p1': 'До 20 000 ₽', 'filters.p2': '20 000 - 100 000 ₽', 'filters.p3': 'Больше 100 000 ₽',
     'filters.sortDefault': 'Сначала популярные', 'filters.sortPriceAsc': 'Сначала дешевле',
@@ -357,7 +357,7 @@ const I18N = {
     'catalog.title': 'Product catalog',
     'catalog.hint': 'Parts and builds in stock. Click "Order" to place a purchase.',
     'catalog.searchPlaceholder': 'Search the catalog…',
-    'filters.category': 'Category', 'filters.price': 'Price',
+    'filters.toggle': 'Filters', 'filters.category': 'Category', 'filters.price': 'Price',
     'filters.any': 'Any', 'filters.reset': 'Reset filters',
     'filters.p1': 'Under 20,000 ₽', 'filters.p2': '20,000 - 100,000 ₽', 'filters.p3': 'Over 100,000 ₽',
     'filters.sortDefault': 'Popular first', 'filters.sortPriceAsc': 'Cheapest first',
@@ -1364,6 +1364,17 @@ if (themeToggleButton) {
     } else {
       applyTheme();
     }
+  });
+}
+
+// ===================== Фильтры каталога (мобильные) =====================
+
+const filtersToggleButton = document.getElementById('filters-toggle');
+
+if (filtersToggleButton) {
+  filtersToggleButton.addEventListener('click', () => {
+    const isOpen = document.documentElement.classList.toggle('filters-open');
+    filtersToggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 }
 
