@@ -2105,6 +2105,71 @@ button {
   .site-nav__list > li:nth-child(5) > .site-nav__link { min-width: 90px; }
 }
 
+/* ---------- Стабильная ширина кнопок при смене языка ---------- */
+
+.site-header__cta {
+  min-width: 116px;
+}
+
+.hero__actions .button--primary {
+  min-width: 258px;
+}
+
+.hero__actions .button:not(.button--primary) {
+  min-width: 191px;
+}
+
+.product-page__actions .button--primary {
+  min-width: 134px;
+}
+
+.product-page__actions .button:not(.button--primary) {
+  min-width: 239px;
+}
+
+.form-card .button--primary {
+  min-width: 108px;
+}
+
+/* ---------- Плавные тени при наведении на панели ---------- */
+
+.review-card,
+.info-card,
+.principle-card,
+.form-card,
+.spec-card,
+.filters {
+  transition: box-shadow 0.25s ease;
+}
+
+.review-card:hover,
+.info-card:hover,
+.principle-card:hover,
+.form-card:hover,
+.spec-card:hover,
+.filters:hover {
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-card,
+  .info-card,
+  .principle-card,
+  .form-card,
+  .spec-card,
+  .filters {
+    transition: none;
+  }
+}
+
+/* Сбросить фильтры: оранжевая с тенью при наведении */
+.filters .button--ghost:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
 @media (min-width: 1920px) {
   .container {
     max-width: 1360px;
