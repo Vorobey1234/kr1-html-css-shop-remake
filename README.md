@@ -27,7 +27,7 @@
 ## Ссылки
 
 - Сайт: https://vorobey1234.github.io/kr1-html-css-shop-remake/
-- Lighthouse-отчёт по доступности: [lighthouse/a11y-index.html](lighthouse/a11y-index.html)
+- Lighthouse-отчёт по доступности: [lighthouse/a11y-index.html](lighthouse/a11y-index.html) — аудит Google Lighthouse: контраст текста, alt изображений, ARIA, порядок заголовков, формы
 
 Страницы:
 
