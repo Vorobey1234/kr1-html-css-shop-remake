@@ -12,13 +12,17 @@
   --surface-alt: #ebeae4;
   --ink: #15161a;
   --ink-soft: #45474f;
-  --muted: #7a7d87;
+  --muted: #5c606b;
   --line: #15161a;
   --line-soft: #d9d8d1;
   --accent: #ff4d00;
   --accent-ink: #ffffff;
+  /* Доступные варианты акцента: текст на светлом и фон кнопок с белым текстом */
+  --accent-text: #b83300;
+  --accent-btn: #c23600;
+  --success-text: #b01f4e;
   --accent-soft: #ffe3d6;
-  --danger: #d92b2b;
+  --danger: #c01f1f;
   --success: #e23a6e;
   --shadow: #15161a;
   --header-h: 66px;
@@ -52,6 +56,9 @@
   --line-soft: #363841;
   --accent-soft: #33190b;
   --accent-ink: #ffffff;
+  --accent-text: #ff9a6b;
+  --accent-btn: #c23600;
+  --success-text: #f07fa4;
   --shadow: #000000;
   --cat-build: #f2f1ec;
 }
@@ -162,8 +169,8 @@ button {
 }
 
 .button--primary {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-btn);
+  border-color: var(--accent-btn);
   color: var(--accent-ink);
 }
 
@@ -215,7 +222,7 @@ button {
 }
 
 .badge-tag--popular {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .badge-tag--discount {
@@ -223,7 +230,7 @@ button {
 }
 
 .badge-tag--fast {
-  color: var(--success);
+  color: var(--success-text);
 }
 
 /* ---------- Шапка ---------- */
@@ -310,7 +317,7 @@ button {
 }
 
 .site-header__logo .site-header__logo-accent {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .site-nav {
@@ -408,7 +415,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 10px;
 }
 
@@ -575,7 +582,7 @@ button {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent-ink);
-  background: var(--accent);
+  background: var(--accent-btn);
 }
 
 .hero__panel-body {
@@ -626,7 +633,7 @@ button {
 .hero__panel-price small {
   display: block;
   font-size: 12px;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .hero__panel-footer .button {
@@ -1182,7 +1189,7 @@ button {
 }
 
 .filters-result strong {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .catalog-empty {
@@ -1341,7 +1348,7 @@ button {
   margin-top: 14px;
   font-family: var(--font-mono);
   font-size: 13px;
-  color: var(--success);
+  color: var(--success-text);
 }
 
 .product-page__status::before {
@@ -1349,7 +1356,7 @@ button {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--success);
+  background: var(--success-text);
 }
 
 .product-page__text {
@@ -2179,6 +2186,37 @@ button {
 }
 
 @media (max-width: 1024px) {
+  /* Шапка переносится: навигация отдельной строкой со скроллом */
+  .topbar__item--schedule {
+    display: none;
+  }
+
+  .site-header__inner {
+    flex-wrap: wrap;
+    padding-block: 12px;
+    gap: 12px;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-nav__list {
+    flex-wrap: nowrap;
+  }
+
+  .site-header__actions {
+    margin-left: auto;
+  }
+
+  .site-header__cta {
+    display: none;
+  }
+
   .hero__inner {
     grid-template-columns: 1fr;
   }
@@ -2641,7 +2679,7 @@ button {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .product-page__stars {
@@ -2894,7 +2932,7 @@ button {
 
 /* Бренд в цвет категории с ромбом-маркером */
 .product-card__brand {
-  color: var(--cat, var(--muted));
+  color: color-mix(in srgb, var(--cat, var(--muted)) 60%, var(--ink));
 }
 
 .product-card__brand::before {
@@ -3077,7 +3115,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.05em;
   color: var(--accent-ink);
-  background: var(--accent);
+  background: var(--accent-btn);
   border-radius: 999px;
   white-space: nowrap;
 }

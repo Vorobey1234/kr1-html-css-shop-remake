@@ -320,7 +320,7 @@ const I18N = {
     'dialog.agreement': 'Я согласен на обработку персональных данных',
     'tip.methodHint': 'Формат: +7 (900) 000-00-00',
     'catalog.title': 'Каталог товаров',
-    'catalog.hint': 'Комплектующие и сборки в наличии. Нажмите «Заказать», чтобы оформить покупку.',
+    'catalog.gridTitle': 'Список товаров', 'catalog.gridTitle': 'Product list', 'catalog.hint': 'Комплектующие и сборки в наличии. Нажмите «Заказать», чтобы оформить покупку.',
     'catalog.searchPlaceholder': 'Поиск по каталогу…',
     'filters.toggle': 'Фильтры', 'filters.category': 'Категория', 'filters.price': 'Стоимость',
     'filters.any': 'Любая', 'filters.reset': 'Сбросить фильтры',
@@ -796,6 +796,14 @@ function renderStars(rating) {
   return '★'.repeat(full) + (half ? '☆' : '') + '<span class="product-card__votes"></span>';
 }
 
+// Список кандидатов для srcset: лёгкие webp-варианты 400/700 + оригинал 1000
+function imageSrcset(src) {
+  if (!src) return '';
+  const dot = src.lastIndexOf('.');
+  const base = src.slice(0, dot);
+  return base + '-400.webp 400w, ' + base + '-700.webp 700w, ' + src + ' 1000w';
+}
+
 function renderBadge(product) {
   if (!product.badge) return '';
   const badge = BADGES[product.badge];
@@ -816,7 +824,9 @@ function renderCard(product) {
     '<div class="product-card__image">' +
     '<div class="product-card__badges">' + renderBadge(product) + '</div>' +
     (product.image
-      ? '<img class="product-card__photo" src="' + product.image + '" alt="' + productName(product) + '" loading="lazy">'
+      ? '<img class="product-card__photo" src="' + product.image + '" srcset="' + imageSrcset(product.image) +
+        '" sizes="(max-width: 720px) 45vw, (max-width: 1024px) 30vw, 240px" width="1000" height="750"' +
+        ' alt="' + productName(product) + '" loading="lazy" decoding="async">'
       : IMAGES[product.category]) +
     '</div>' +
     '<div class="product-card__body">' +
@@ -1022,7 +1032,9 @@ function renderProductPage(product) {
   document.getElementById('product-category-link-text').textContent =
     (isEn() ? 'Category: ' : 'Категория: ') + catName;
   document.getElementById('product-image').innerHTML = product.image
-    ? '<img class="product-page__photo" src="' + product.image + '" alt="' + productName(product) + '">'
+    ? '<img class="product-page__photo" src="' + product.image + '" srcset="' + imageSrcset(product.image) +
+      '" sizes="(max-width: 1024px) 92vw, 560px" width="1000" height="750"' +
+      ' alt="' + productName(product) + '" decoding="async">'
     : IMAGES[product.category];
   document.getElementById('product-badges').innerHTML = renderBadge(product);
   document.getElementById('product-title').textContent = productName(product);
