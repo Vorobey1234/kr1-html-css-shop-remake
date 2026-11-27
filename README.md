@@ -23,7 +23,11 @@
 
 Изображения товаров: официальные пресс-материалы NVIDIA, AMD, Intel, Kingston, ADATA, Samsung, MSI, be quiet!, DeepCool, Lian Li (образовательное использование), плюс бесплатные снимки [Pexels](https://www.pexels.com) (лицензия Pexels) для раздела сборок.
 
-Атрибуция: иконки категорий и товаров — [Lucide](https://lucide.dev) v1.77.0, лицензия ISC (иконка gpu нарисована вручную в том же стиле).
+
+## Ссылки
+
+- Сайт: https://vorobey1234.github.io/kr1-html-css-shop-remake/
+- Lighthouse-отчёт по доступности: [lighthouse/a11y-index.html](lighthouse/a11y-index.html)
 
 Страницы:
 
